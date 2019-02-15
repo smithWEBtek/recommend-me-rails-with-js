@@ -12,5 +12,7 @@ class Recommendation < ApplicationRecord
   #scope :authored_by(x), -> { where("user_id = ?", x) }
   #issue with session hash not being available in the model - how to get around?
 
-
+  def upcase
+    self.title.upcase
+  end
 end
